@@ -1,0 +1,5 @@
+CREATE USER 'neeraj'@'practical' IDENTIFIED BY 'RamanujanCollege';
+CREATE ROLE 'admin';
+GRANT SELECT, INSERT, UPDATE, DELETE ON student_society.* TO 'admin';
+REVOKE DELETE ON student_society.* FROM 'admin';
+USE student_society; CREATE INDEX UID ON enrollment(ROLL_NO, SID);
